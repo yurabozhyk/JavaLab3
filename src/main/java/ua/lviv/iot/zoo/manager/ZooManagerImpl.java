@@ -12,6 +12,17 @@ import ua.lviv.iot.zoo.models.Species;
 
 public class ZooManagerImpl implements ZooManager {
 
+    private static final int TURTLE_AGE = 140;
+    private static final int TURTLE_YEARS_IN_ZOO = 3;
+    private static final int TURTLE_VOLUME_OF_AQUARIUM = 400;
+    private static final int SHARK_AGE = 20;
+    private static final int SHARK_YEARS_IN_ZOO = 5;
+    private static final int SHARK_VOLUME_OF_AQUARIUM = 1000;
+    private static final int PENGUIN_AGE = 7;
+    private static final int PENGUIN_YEARS_IN_ZOO = 10;
+    private static final int PENGUIN_VOLUME_OF_AQUARIUM = 600;
+    private static final int AGE_PARAM = 5;
+
     private List<AquariumAnimal> listOfAquariumAnimal = new ArrayList<>();
 
     public final void setListOfAquariumAnimal(
@@ -63,11 +74,17 @@ public class ZooManagerImpl implements ZooManager {
 
         ZooManager josh = new ZooManagerImpl();
         AquariumAnimal turtle = new AquariumAnimal(
-                "Bobo", 140, 3, Sex.MALE, 400, Species.REPTILE);
+                "Bobo", TURTLE_AGE, TURTLE_YEARS_IN_ZOO, Sex.MALE,
+                TURTLE_VOLUME_OF_AQUARIUM,
+                Species.REPTILE);
         AquariumAnimal shark = new AquariumAnimal(
-                "Lilo", 20, 5, Sex.FEMALE, 1000, Species.FISH);
+                "Lilo", SHARK_AGE, SHARK_YEARS_IN_ZOO, Sex.FEMALE,
+                SHARK_VOLUME_OF_AQUARIUM,
+                Species.FISH);
         AquariumAnimal penguin = new AquariumAnimal(
-                "Fed", 7, 10, Sex.MALE, 600, Species.BIRDS);
+                "Fed", PENGUIN_AGE, PENGUIN_YEARS_IN_ZOO, Sex.MALE,
+                PENGUIN_VOLUME_OF_AQUARIUM,
+                Species.BIRDS);
 
         List<AquariumAnimal> newAquariumAnimalList = new ArrayList<>();
         newAquariumAnimalList.add(turtle);
@@ -76,7 +93,7 @@ public class ZooManagerImpl implements ZooManager {
 
         ((ZooManagerImpl) josh).setListOfAquariumAnimal(newAquariumAnimalList);
 
-        System.out.println(josh.findAquariumAnimalsOlderThan(5));
+        System.out.println(josh.findAquariumAnimalsOlderThan(AGE_PARAM));
         System.out.println(josh.sortBySpeciesOfAnimal(
                 newAquariumAnimalList, true));
         System.out.println(josh.sortByVolumeOfAquarium(
