@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2019</copyright>
     <item>
-      <title>File: 12,
-             Errors: 100,
+      <title>File: 13,
+             Errors: 103,
              Warnings: 0,
              Infos: 0
       </title>
@@ -70,20 +70,6 @@ under the License.
                 </td>
                 <td>
                   3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.zoo.manager.ZooManagerImpl.java">ua/lviv/iot/zoo/manager/ZooManagerImpl.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  16
                 </td>
               </tr>
                           <tr>
@@ -144,20 +130,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.zoo.models.SwimType.java">ua/lviv/iot/zoo/models/SwimType.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.zoo.models.SpeciesOfSharks.java">ua/lviv/iot/zoo/models/SpeciesOfSharks.java</a>
                 </td>
                 <td>
@@ -196,6 +168,48 @@ under the License.
                 </td>
                 <td>
                   23
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.zoo.manager.ZooManagerImpl.java">ua/lviv/iot/zoo/manager/ZooManagerImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.zoo.manager.ZooManagerImplTest.java">ua/lviv/iot/zoo/manager/ZooManagerImplTest.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.zoo.models.SwimType.java">ua/lviv/iot/zoo/models/SwimType.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
                 </td>
               </tr>
                           <tr>
