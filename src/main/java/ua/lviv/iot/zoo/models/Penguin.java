@@ -10,11 +10,17 @@ public class Penguin extends AquariumAnimal {
 
     }
 
-    public Penguin(String nameObj, int ageObj, int yearInZooObj, Sex sexObj, int volumeOfAquariumObj, Species speciesOfAnimalObj, int height, int weight, SpeciesOfPenguin speciesOfPenguin) {
-        super(nameObj, ageObj, yearInZooObj, sexObj, volumeOfAquariumObj, speciesOfAnimalObj);
-        this.height = height;
-        this.weight = weight;
-        this.speciesOfPenguin = speciesOfPenguin;
+    public Penguin(final String nameObj, final int ageObj,
+                   final int yearInZooObj, final Sex sexObj,
+                   final int volumeOfAquariumObj,
+                   final Species speciesOfAnimalObj,
+                   final int heightObj, final int weightObj,
+                   final SpeciesOfPenguin speciesOfPenguinObj) {
+        super(nameObj, ageObj, yearInZooObj, sexObj, volumeOfAquariumObj,
+                speciesOfAnimalObj);
+        this.height = heightObj;
+        this.weight = weightObj;
+        this.speciesOfPenguin = speciesOfPenguinObj;
     }
 
     public final int getHeight() {

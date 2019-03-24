@@ -1,9 +1,22 @@
 package ua.lviv.iot.zoo.manager;
 
-import java.util.*;
+import java.util.List;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Collections;
 import java.util.stream.Collectors;
 
-import ua.lviv.iot.zoo.models.*;
+import ua.lviv.iot.zoo.models.Sex;
+import ua.lviv.iot.zoo.models.Shark;
+import ua.lviv.iot.zoo.models.Shell;
+import ua.lviv.iot.zoo.models.Turtle;
+import ua.lviv.iot.zoo.models.Penguin;
+import ua.lviv.iot.zoo.models.Species;
+import ua.lviv.iot.zoo.models.SwimType;
+import ua.lviv.iot.zoo.models.AquariumAnimal;
+import ua.lviv.iot.zoo.models.SpeciesOfSharks;
+import ua.lviv.iot.zoo.models.SpeciesOfPenguin;
+
 
 public class ZooManagerImpl implements ZooManager {
 
@@ -80,19 +93,19 @@ public class ZooManagerImpl implements ZooManager {
     public static void main(final String[] args) {
 
         ZooManager josh = new ZooManagerImpl();
-        AquariumAnimal turtle = new Turtle("Bobo", TURTLE_AGE, TURTLE_YEARS_IN_ZOO, Sex.MALE,
-                TURTLE_VOLUME_OF_AQUARIUM,
+        AquariumAnimal turtle = new Turtle("Bobo", TURTLE_AGE,
+                TURTLE_YEARS_IN_ZOO, Sex.MALE, TURTLE_VOLUME_OF_AQUARIUM,
                 Species.REPTILE, Shell.GREEN_PATTERN, TURTLE_IMMERSION_DEPTH);
         AquariumAnimal shark = new Shark(
                 "Lilo", SHARK_AGE, SHARK_YEARS_IN_ZOO, Sex.FEMALE,
-                SHARK_VOLUME_OF_AQUARIUM,
-                Species.FISH, SpeciesOfSharks.TIGER, SHARK_SPEED, SwimType.IN_GROUPS);
+                SHARK_VOLUME_OF_AQUARIUM, Species.FISH,
+                SpeciesOfSharks.TIGER, SHARK_SPEED, SwimType.IN_GROUPS);
         AquariumAnimal penguin = new Penguin(
                 "Fed", PENGUIN_AGE, PENGUIN_YEARS_IN_ZOO, Sex.MALE,
-                PENGUIN_VOLUME_OF_AQUARIUM,
-                Species.BIRDS, PENGUIN_HEIGHT, PENGUIN_WEIGHT, SpeciesOfPenguin.KING);
+                PENGUIN_VOLUME_OF_AQUARIUM, Species.BIRDS, PENGUIN_HEIGHT,
+                PENGUIN_WEIGHT, SpeciesOfPenguin.KING);
 
-        List<AquariumAnimal> newAquariumAnimalList = new ArrayList<>();
+        List<AquariumAnimal> newAquariumAnimalList = new LinkedList<>();
         newAquariumAnimalList.add(turtle);
         newAquariumAnimalList.add(shark);
         newAquariumAnimalList.add(penguin);
