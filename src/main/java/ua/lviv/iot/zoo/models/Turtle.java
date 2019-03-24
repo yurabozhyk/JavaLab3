@@ -9,9 +9,10 @@ public class Turtle extends AquariumAnimal {
 
     }
 
-    public Turtle(final Shell shellObj, final int immersionDepthObj) {
-        this.shell = shellObj;
-        this.immersionDepth = immersionDepthObj;
+    public Turtle(String nameObj, int ageObj, int yearInZooObj, Sex sexObj, int volumeOfAquariumObj, Species speciesOfAnimalObj, Shell shell, int immersionDepth) {
+        super(nameObj, ageObj, yearInZooObj, sexObj, volumeOfAquariumObj, speciesOfAnimalObj);
+        this.shell = shell;
+        this.immersionDepth = immersionDepth;
     }
 
     public final Shell getShell() {
