@@ -1,9 +1,14 @@
 package ua.lviv.iot.zoo.manager;
 
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.zoo.models.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import ua.lviv.iot.zoo.models.AquariumAnimal;
+import ua.lviv.iot.zoo.models.Shark;
+import ua.lviv.iot.zoo.models.Penguin;
+import ua.lviv.iot.zoo.models.Species;
+import ua.lviv.iot.zoo.models.Turtle;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.LinkedList;
 import java.util.List;
