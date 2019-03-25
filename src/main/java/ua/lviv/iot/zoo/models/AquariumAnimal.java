@@ -98,7 +98,7 @@ public class AquariumAnimal {
                 + "yearInZoo" + ","
                 + "sex" + ","
                 + "volumeOfAquarium" + ","
-                + "speciesOfAnimal" + ",";
+                + "speciesOfAnimal";
     }
 
     public String toCSV() {
@@ -107,6 +107,6 @@ public class AquariumAnimal {
                 + yearInZoo + ","
                 + sex + ","
                 + volumeOfAquarium + ","
-                + speciesOfAnimal + ",";
+                + speciesOfAnimal;
     }
 }
