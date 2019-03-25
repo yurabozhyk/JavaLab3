@@ -59,4 +59,18 @@ public class Penguin extends AquariumAnimal {
                 + speciesOfPenguin
                 + '}';
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + ","
+                + "height" + ","
+                + "weight" + ","
+                + "speciesOfPenguin" + '\n';
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ","
+                + height + ","
+                + weight + ","
+                + speciesOfPenguin + '\n';
+    }
 }

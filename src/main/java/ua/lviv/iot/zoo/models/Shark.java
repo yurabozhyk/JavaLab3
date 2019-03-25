@@ -58,4 +58,18 @@ public class Shark extends AquariumAnimal {
                 + swimmingType
                 + '}';
     }
+
+    public String getHeaders() {
+        return super.getHeaders() + ","
+                + "speciesOfSharks" + ","
+                + "speed" + ","
+                + "swimmingType" + '\n';
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ","
+                + speciesOfSharks + ","
+                + speed + ","
+                + swimmingType + '\n';
+    }
 }
