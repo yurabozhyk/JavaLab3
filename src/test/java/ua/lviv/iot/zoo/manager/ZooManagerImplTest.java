@@ -1,5 +1,6 @@
 package ua.lviv.iot.zoo.manager;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ua.lviv.iot.zoo.models.AquariumAnimal;
@@ -16,28 +17,46 @@ import java.util.List;
 class ZooManagerImplTest {
 
     private List<AquariumAnimal> listOfAquariumAnimals;
+    private List<AquariumAnimal> expectedList;
 
     private ZooManager zooManager;
 
-    @Test
-    public void testSortBySpeciesOfAnimal() {
+    private AquariumAnimal shark;
+    private AquariumAnimal turtle;
+    private AquariumAnimal penguin;
+
+
+    @BeforeEach
+    public void setUp() {
         listOfAquariumAnimals = new LinkedList<>();
 
-        Turtle turtle = new Turtle();
+        turtle = new Turtle();
         turtle.setSpeciesOfAnimal(Species.REPTILE);
+        turtle.setVolumeOfAquarium(3000);
+        turtle.setAge(150);
 
-        Shark shark = new Shark();
+        shark = new Shark();
         shark.setSpeciesOfAnimal(Species.FISH);
-        Penguin penguin = new Penguin();
+        shark.setVolumeOfAquarium(2000);
+        shark.setAge(12);
+
+        penguin = new Penguin();
         penguin.setSpeciesOfAnimal(Species.BIRDS);
+        penguin.setVolumeOfAquarium(1000);
+        penguin.setAge(4);
 
-        List<AquariumAnimal> expectedList = new LinkedList<>();
+        expectedList = new LinkedList<>();
 
-        listOfAquariumAnimals.add(shark);
         listOfAquariumAnimals.add(turtle);
+        listOfAquariumAnimals.add(shark);
         listOfAquariumAnimals.add(penguin);
 
         zooManager = new ZooManagerImpl(listOfAquariumAnimals);
+
+    }
+
+    @Test
+    public void testSortBySpeciesOfAnimal() {
 
         expectedList.add(shark);
         expectedList.add(turtle);
@@ -46,7 +65,7 @@ class ZooManagerImplTest {
         zooManager.sortBySpeciesOfAnimal(listOfAquariumAnimals, false);
         assertEquals(expectedList, listOfAquariumAnimals);
 
-        expectedList = new LinkedList<>();
+        expectedList.clear();
 
         expectedList.add(penguin);
         expectedList.add(turtle);
@@ -58,36 +77,18 @@ class ZooManagerImplTest {
 
     @Test
     public void testSortByVolumeOfAquarium() {
-        listOfAquariumAnimals = new LinkedList<>();
-
-        Turtle turtle = new Turtle();
-        turtle.setVolumeOfAquarium(800);
-
-        Shark shark = new Shark();
-        shark.setVolumeOfAquarium(1400);
-
-        Penguin penguin = new Penguin();
-        penguin.setVolumeOfAquarium(400);
-
-        List<AquariumAnimal> expectedList = new LinkedList<>();
-
-        listOfAquariumAnimals.add(turtle);
-        listOfAquariumAnimals.add(shark);
-        listOfAquariumAnimals.add(penguin);
-
-        zooManager = new ZooManagerImpl(listOfAquariumAnimals);
 
         expectedList.add(penguin);
-        expectedList.add(turtle);
         expectedList.add(shark);
+        expectedList.add(turtle);
 
         zooManager.sortByVolumeOfAquarium(listOfAquariumAnimals, false);
         assertEquals(expectedList, listOfAquariumAnimals);
 
-        expectedList = new LinkedList<>();
+        expectedList.clear();
 
-        expectedList.add(shark);
         expectedList.add(turtle);
+        expectedList.add(shark);
         expectedList.add(penguin);
 
         zooManager.sortByVolumeOfAquarium(listOfAquariumAnimals, true);
@@ -96,28 +97,10 @@ class ZooManagerImplTest {
 
     @Test
     public void testFindAquariumAnimalsOlderThan() {
-        listOfAquariumAnimals = new LinkedList<>();
 
-        Turtle turtle = new Turtle();
-        turtle.setAge(150);
-
-        Shark shark = new Shark();
-        shark.setAge(12);
-
-        Penguin penguin = new Penguin();
-        penguin.setAge(4);
-
-        List<AquariumAnimal> expectedList = new LinkedList<>();
-
-        listOfAquariumAnimals.add(penguin);
-        listOfAquariumAnimals.add(shark);
-        listOfAquariumAnimals.add(turtle);
-
-        zooManager = new ZooManagerImpl(listOfAquariumAnimals);
-
+        expectedList.add(turtle);
         expectedList.add(shark);
         expectedList.add(penguin);
-        expectedList.add(turtle);
 
         assertEquals(0, zooManager.findAquariumAnimalsOlderThan(200).size());
         assertEquals(1, zooManager.findAquariumAnimalsOlderThan(20).size());
