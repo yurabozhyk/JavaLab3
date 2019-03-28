@@ -49,12 +49,12 @@ public class Turtle extends AquariumAnimal {
     public String getHeaders() {
         return super.getHeaders() + ","
                 + "shell" + ","
-                + "immersionDepth" + '\n';
+                + "immersionDepth";
     }
 
     public String toCSV() {
         return super.toCSV() + ","
                 + shell + ","
-                + immersionDepth + '\n';
+                + immersionDepth;
     }
 }

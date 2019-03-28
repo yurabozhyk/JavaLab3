@@ -64,13 +64,13 @@ public class Penguin extends AquariumAnimal {
         return super.getHeaders() + ","
                 + "height" + ","
                 + "weight" + ","
-                + "speciesOfPenguin" + '\n';
+                + "speciesOfPenguin";
     }
 
     public String toCSV() {
         return super.toCSV() + ","
                 + height + ","
                 + weight + ","
-                + speciesOfPenguin + '\n';
+                + speciesOfPenguin;
     }
 }
