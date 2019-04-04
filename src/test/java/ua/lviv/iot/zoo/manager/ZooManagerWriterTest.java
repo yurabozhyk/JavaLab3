@@ -14,22 +14,28 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ZooManagerWriterTest {
 
     private List<AquariumAnimal> listOfAquariumAnimal = new LinkedList<>();
+    ZooManagerWriter writer = new ZooManagerWriter();
+    private String filePath = "myFile";
+
+    private Turtle turtle = new Turtle("Jojo", 450, 40, Sex.MALE, 2000,
+            Species.REPTILE, Shell.BROWN_PATTERN, 10000);
+    private Penguin penguin = new Penguin("Obem", 22, 10, Sex.MALE, 600,
+            Species.BIRDS, 45, 40, SpeciesOfPenguin.MAGELLANIC);
+    private Shark shark = new Shark("Bebe", 30, 23, Sex.FEMALE, 2500,
+            Species.FISH, SpeciesOfSharks.BLUE, 100, SwimType.IN_GROUPS);
 
     @BeforeEach
     public void setUp() {
-        listOfAquariumAnimal.add(new Turtle("Jojo", 450, 40, Sex.MALE, 2000,
-                Species.REPTILE, Shell.BROWN_PATTERN, 10000));
-        listOfAquariumAnimal.add(new Penguin("Obem", 22, 10, Sex.MALE, 600,
-                Species.BIRDS, 45, 40, SpeciesOfPenguin.MAGELLANIC));
-        listOfAquariumAnimal.add(new Shark("Bebe", 30, 23, Sex.FEMALE, 2500,
-                Species.FISH, SpeciesOfSharks.BLUE, 100, SwimType.IN_GROUPS));
+        listOfAquariumAnimal.add(turtle);
+        listOfAquariumAnimal.add(penguin);
+        listOfAquariumAnimal.add(shark);
+
+        writer = new ZooManagerWriter(filePath);
     }
 
     @Test
     void testWriteToFile() {
-        File myFile = new File("writer.csv");
-
-        ZooManagerWriter writer = new ZooManagerWriter();
+        File myFile = new File(filePath + ".csv");
         writer.writeToFile(listOfAquariumAnimal);
 
         try(FileInputStream fis = new FileInputStream(myFile);
@@ -43,7 +49,13 @@ public class ZooManagerWriterTest {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            System.out.println("Reading ended");
         }
+    }
+
+    @Test
+    void testGettersAndSettersFilePath() {
+        writer.setFilePath(filePath);
+        assertEquals(filePath, writer.getFilePath(),
+                "Getter or Setter method failed");
     }
 }
