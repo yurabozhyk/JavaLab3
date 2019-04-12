@@ -19,6 +19,8 @@ public class ZooManagerWriterTest {
 
     private Turtle turtle = new Turtle("Jojo", 450, 40, Sex.MALE, 2000,
             Species.REPTILE, Shell.BROWN_PATTERN, 10000);
+    private Turtle turtle1 = new Turtle("Beb", 300, 40, Sex.MALE, 3000,
+            Species.REPTILE, Shell.BROWN_PATTERN, 30000);
     private Penguin penguin = new Penguin("Obem", 22, 10, Sex.MALE, 600,
             Species.BIRDS, 45, 40, SpeciesOfPenguin.MAGELLANIC);
     private Shark shark = new Shark("Bebe", 30, 23, Sex.FEMALE, 2500,
@@ -27,6 +29,7 @@ public class ZooManagerWriterTest {
     @BeforeEach
     public void setUp() {
         listOfAquariumAnimal.add(turtle);
+        listOfAquariumAnimal.add(turtle1);
         listOfAquariumAnimal.add(penguin);
         listOfAquariumAnimal.add(shark);
 
@@ -48,7 +51,6 @@ public class ZooManagerWriterTest {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
         }
     }
 
