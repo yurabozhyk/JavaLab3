@@ -37,7 +37,7 @@ public class ZooManagerWriter {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } finally { }
+        }
     }
 
     public final String getFilePath() {
