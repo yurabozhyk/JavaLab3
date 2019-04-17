@@ -10,8 +10,13 @@ public class Shark extends AquariumAnimal {
 
     }
 
-    public Shark(final SpeciesOfSharks speciesOfSharksObj, final int speedObj,
+    public Shark(final String nameObj, final int ageObj, final int yearInZooObj,
+                 final Sex sexObj, final int volumeOfAquariumObj,
+                 final Species speciesOfAnimalObj,
+                 final SpeciesOfSharks speciesOfSharksObj, final int speedObj,
                  final SwimType swimmingTypeObj) {
+        super(nameObj, ageObj, yearInZooObj, sexObj, volumeOfAquariumObj,
+                speciesOfAnimalObj);
         this.speciesOfSharks = speciesOfSharksObj;
         this.speed = speedObj;
         this.swimmingType = swimmingTypeObj;

@@ -10,8 +10,14 @@ public class Penguin extends AquariumAnimal {
 
     }
 
-    public Penguin(final int heightObj, final int weightObj,
+    public Penguin(final String nameObj, final int ageObj,
+                   final int yearInZooObj, final Sex sexObj,
+                   final int volumeOfAquariumObj,
+                   final Species speciesOfAnimalObj,
+                   final int heightObj, final int weightObj,
                    final SpeciesOfPenguin speciesOfPenguinObj) {
+        super(nameObj, ageObj, yearInZooObj, sexObj, volumeOfAquariumObj,
+                speciesOfAnimalObj);
         this.height = heightObj;
         this.weight = weightObj;
         this.speciesOfPenguin = speciesOfPenguinObj;
