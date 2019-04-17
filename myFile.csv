@@ -1,0 +1,8 @@
+name,age,yearInZoo,sex,volumeOfAquarium,speciesOfAnimal,shell,immersionDepth
+Jojo,450,40,MALE,2000,REPTILE,BROWN_PATTERN,10000
+name,age,yearInZoo,sex,volumeOfAquarium,speciesOfAnimal,shell,immersionDepth
+Beb,300,40,MALE,3000,REPTILE,BROWN_PATTERN,30000
+name,age,yearInZoo,sex,volumeOfAquarium,speciesOfAnimal,height,weight,speciesOfPenguin
+Obem,22,10,MALE,600,BIRDS,45,40,MAGELLANIC
+name,age,yearInZoo,sex,volumeOfAquarium,speciesOfAnimal,speciesOfSharks,speed,swimmingType
+Bebe,30,23,FEMALE,2500,FISH,BLUE,100,IN_GROUPS

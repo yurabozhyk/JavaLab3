@@ -1,0 +1,13 @@
+ua/lviv/iot/zoo/models/Species.class
+ua/lviv/iot/zoo/models/AquariumAnimal.class
+ua/lviv/iot/zoo/models/Turtle.class
+ua/lviv/iot/zoo/manager/ZooManagerWriter.class
+ua/lviv/iot/zoo/models/Shell.class
+ua/lviv/iot/zoo/models/Shark.class
+ua/lviv/iot/zoo/manager/ZooManagerImpl.class
+ua/lviv/iot/zoo/models/SpeciesOfSharks.class
+ua/lviv/iot/zoo/manager/ZooManager.class
+ua/lviv/iot/zoo/models/Sex.class
+ua/lviv/iot/zoo/models/SpeciesOfPenguin.class
+ua/lviv/iot/zoo/models/Penguin.class
+ua/lviv/iot/zoo/models/SwimType.class
