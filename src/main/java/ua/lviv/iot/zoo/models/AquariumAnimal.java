@@ -1,6 +1,13 @@
 package ua.lviv.iot.zoo.models;
 
+import javax.persistence.*;
+
+@Entity
 public class AquariumAnimal {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     private String name;
     private int age;
@@ -73,9 +80,19 @@ public class AquariumAnimal {
         this.speciesOfAnimal = speciesOfAnimalObj;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "AquariumAnimal{"
+                + "id="
+                + id
                 + "name='"
                 + name
                 + '\''

@@ -1,5 +1,10 @@
 package ua.lviv.iot.zoo.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+
+@Entity
+@Inheritance
 public class Penguin extends AquariumAnimal {
 
     private int height;
