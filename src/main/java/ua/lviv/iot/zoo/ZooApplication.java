@@ -16,10 +16,10 @@ public class ZooApplication {
 	}
 
 	@Bean
-	public CommandLineRunner zoo(final PenguinRepository penguinRepository) {
+	public CommandLineRunner penguinBean(final PenguinRepository penguinRepository) {
 		return (args) -> {
-			penguinRepository.save(new Penguin("Obeme", 10, 6, Sex.MALE, 2000, Species.BIRDS, 150, 55, SpeciesOfPenguin.FAIRY));
-			penguinRepository.findAll().forEach(System.out::println);
+			penguinRepository.save(new Penguin("Obeme", 15, 7, Sex.MALE, 2000, Species.BIRDS, 155, 55, SpeciesOfPenguin.FAIRY));
+			penguinRepository.findAll().forEach(penguin -> System.out.println(penguin));
 		};
 	}
 }
