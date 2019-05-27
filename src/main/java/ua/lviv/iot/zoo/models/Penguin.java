@@ -1,6 +1,8 @@
 package ua.lviv.iot.zoo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Inheritance;
 
 @Entity
@@ -9,6 +11,8 @@ public class Penguin extends AquariumAnimal {
 
     private int height;
     private int weight;
+
+    @Enumerated(EnumType.STRING)
     private SpeciesOfPenguin speciesOfPenguin;
 
     public Penguin() {

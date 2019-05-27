@@ -12,8 +12,12 @@ public class AquariumAnimal {
     private String name;
     private int age;
     private int yearInZoo;
+
+    @Enumerated(EnumType.STRING)
     private Sex sex;
     private int volumeOfAquarium;
+
+    @Enumerated(EnumType.STRING)
     private Species speciesOfAnimal;
 
     public AquariumAnimal() {

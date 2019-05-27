@@ -1,10 +1,5 @@
 package ua.lviv.iot.zoo.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-
-@Entity
-@Inheritance
 public class Turtle extends AquariumAnimal {
 
     private Shell shell;
