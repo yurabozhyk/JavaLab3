@@ -112,22 +112,4 @@ public class AquariumAnimal {
                 + speciesOfAnimal
                 + '}';
     }
-
-    public String getHeaders() {
-        return "name" + ","
-                + "age" + ","
-                + "yearInZoo" + ","
-                + "sex" + ","
-                + "volumeOfAquarium" + ","
-                + "speciesOfAnimal";
-    }
-
-    public String toCSV() {
-        return name + ","
-                + age + ","
-                + yearInZoo + ","
-                + sex + ","
-                + volumeOfAquarium + ","
-                + speciesOfAnimal;
-    }
 }

@@ -45,16 +45,4 @@ public class Turtle extends AquariumAnimal {
                 + immersionDepth
                 + '}';
     }
-
-    public String getHeaders() {
-        return super.getHeaders() + ","
-                + "shell" + ","
-                + "immersionDepth";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + ","
-                + shell + ","
-                + immersionDepth;
-    }
 }
