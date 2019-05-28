@@ -1,12 +1,23 @@
 package ua.lviv.iot.zoo.models;
 
+import javax.persistence.*;
+
+@Entity
 public class AquariumAnimal {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     private String name;
     private int age;
     private int yearInZoo;
+
+    @Enumerated(EnumType.STRING)
     private Sex sex;
     private int volumeOfAquarium;
+
+    @Enumerated(EnumType.STRING)
     private Species speciesOfAnimal;
 
     public AquariumAnimal() {
@@ -73,9 +84,19 @@ public class AquariumAnimal {
         this.speciesOfAnimal = speciesOfAnimalObj;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "AquariumAnimal{"
+                + "id="
+                + id
                 + "name='"
                 + name
                 + '\''
